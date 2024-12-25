@@ -7,6 +7,7 @@ import { MdMenu } from "react-icons/md";
 const links = [
     { path: "/CareerApplication", label: "Career Application" },
     { path: "/Employee", label: "Employee" },
+    { path: "/Evaluation", label: "Evaluation" },
     // Add more links as needed
 ];
 

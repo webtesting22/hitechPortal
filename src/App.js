@@ -10,6 +10,7 @@ import SignIn from "./Components/signIn/signIn";
 import PrivateRoute from "./Components/PrivateRoute";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Evaluation from "./Components/SideBarComponents/Evaluation/Evaluation";
 function App() {
   const [isSignin, setIsSignin] = useState(false); // Use array destructuring for useState
   useEffect(() => {
@@ -31,6 +32,8 @@ function App() {
             <Route path="/dashboard" element={<DashBoard />} />
             <Route path="/CareerApplication" element={<CareerApplication />} />
             <Route path="/Employee" element={<Employee />} />
+            <Route path="/Evaluation" element={<Evaluation />} />
+
           </Route>
         </Routes>
       {/* </div> */}
