@@ -11,31 +11,32 @@ import PrivateRoute from "./Components/PrivateRoute";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Evaluation from "./Components/SideBarComponents/Evaluation/Evaluation";
+import JobApplicationForm from "./Components/SideBarComponents/JobApplicationForm/JobApplicationForm";
 function App() {
   const [isSignin, setIsSignin] = useState(false); // Use array destructuring for useState
   useEffect(() => {
-   
-    
+
+
   }, [isSignin]);
 
   return (
     <BrowserRouter>
       {/* {isSignin && <Navigation />} */}
-       {/* <div style={{ width: "100%" }}> */}
-        {/* {isSignin && <TopBarComponent />} */} 
-        <Routes>
-          {/* Public Route */}
-          <Route path="/" element={<SignIn setIsSignin={setIsSignin} />} />
-      
-          {/* Private Routes */}
-          <Route element={<PrivateRoute isAuthenticated={isSignin} />}>
-            <Route path="/dashboard" element={<DashBoard />} />
-            <Route path="/CareerApplication" element={<CareerApplication />} />
-            <Route path="/Employee" element={<Employee />} />
-            <Route path="/Evaluation" element={<Evaluation />} />
+      {/* <div style={{ width: "100%" }}> */}
+      {/* {isSignin && <TopBarComponent />} */}
+      <Routes>
+        {/* Public Route */}
+        <Route path="/" element={<SignIn setIsSignin={setIsSignin} />} />
 
-          </Route>
-        </Routes>
+        {/* Private Routes */}
+        <Route element={<PrivateRoute isAuthenticated={isSignin} />}>
+          <Route path="/dashboard" element={<DashBoard />} />
+          <Route path="/CareerApplication" element={<CareerApplication />} />
+          <Route path="/Employee" element={<Employee />} />
+          <Route path="/Evaluation" element={<Evaluation />} />
+          <Route path="/JobApplicationForm" element={<JobApplicationForm />} />
+        </Route>
+      </Routes>
       {/* </div> */}
     </BrowserRouter>
   );

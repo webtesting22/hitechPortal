@@ -1,0 +1,29 @@
+#JobApplicationForm{
+    width: 100%;
+display: flex;
+justify-content: center;
+}
+
+#JobApplicationForm .ApplicationFormContainer{
+    width: 70%;
+}
+.Formheader{
+    margin: 3rem 0rem;
+}
+.SubmitBtnContainer{
+    margin: 3rem 0rem;
+}
+.SubmitBtnContainer .ant-btn{
+    background-color: #0d2e61 !important;
+    transition: .5s;
+}
+.SubmitBtnContainer .ant-btn:hover{
+    background-color: #0d2e61 !important;
+    transform: scale(1.05);
+    transition: .5s;
+}
+.headerLogo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
