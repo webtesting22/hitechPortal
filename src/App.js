@@ -27,14 +27,14 @@ function App() {
       <Routes>
         {/* Public Route */}
         <Route path="/" element={<SignIn setIsSignin={setIsSignin} />} />
-
+        <Route path="/JobApplicationForm" element={<JobApplicationForm />} />
         {/* Private Routes */}
         <Route element={<PrivateRoute isAuthenticated={isSignin} />}>
           <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/CareerApplication" element={<CareerApplication />} />
           <Route path="/Employee" element={<Employee />} />
           <Route path="/Evaluation" element={<Evaluation />} />
-          <Route path="/JobApplicationForm" element={<JobApplicationForm />} />
+
         </Route>
       </Routes>
       {/* </div> */}

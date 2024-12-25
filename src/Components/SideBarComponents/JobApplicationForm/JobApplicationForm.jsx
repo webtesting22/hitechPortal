@@ -96,7 +96,7 @@ const JobApplicationForm = () => {
                                 <img src="/hitech_logo.png" alt="" />
                             </div>
                             <br />
-                            <Title level={2} style={{ textAlign: 'center', color: '#0d2e61',marginBottom:"0px" }}>
+                            <Title level={2} style={{ textAlign: 'center', color: '#0d2e61', marginBottom: "0px" }}>
                                 Job Application Form
                             </Title>
                             <Text
@@ -112,7 +112,7 @@ const JobApplicationForm = () => {
 
                         </div>
                         <Row gutter={16}>
-                            <Col span={12}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <Form.Item
                                     name="department"
                                     label="Which department are you applying for?"
@@ -120,12 +120,12 @@ const JobApplicationForm = () => {
                                 >
                                     <Select
                                         placeholder="Select Department"
-                                        
+
                                         style={{
                                             width: '100%',
                                             // backgroundColor: '#f6f8fb',
                                             borderRadius: '4px',
-                                            border: '1px solid #d9d9d9',
+                                            // border: '1px solid #d9d9d9',
                                         }}
                                     >
                                         <Option value="hr">HR</Option>
@@ -135,7 +135,7 @@ const JobApplicationForm = () => {
                                 </Form.Item>
                             </Col>
 
-                            <Col span={12}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <Form.Item
                                     name="position"
                                     label="What position are you applying for?"
@@ -155,7 +155,7 @@ const JobApplicationForm = () => {
                         </Row>
 
                         <Row gutter={16}>
-                            <Col span={12}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <Form.Item
                                     name="fullName"
                                     label="What is your full name?"
@@ -173,7 +173,7 @@ const JobApplicationForm = () => {
                                 </Form.Item>
                             </Col>
 
-                            <Col span={12}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <Form.Item
                                     name="contactNumber"
                                     label="What is your contact number?"
@@ -195,7 +195,7 @@ const JobApplicationForm = () => {
                         </Row>
 
                         <Row gutter={16}>
-                            <Col span={12}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <Form.Item
                                     name="currentLocation"
                                     label="Where are you currently located?"
@@ -215,7 +215,7 @@ const JobApplicationForm = () => {
                                 </Form.Item>
                             </Col>
 
-                            <Col span={12}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <Form.Item
                                     name="permanentLocation"
                                     label="What is your permanent location?"
@@ -237,7 +237,7 @@ const JobApplicationForm = () => {
                         </Row>
 
                         <Row gutter={16}>
-                            <Col span={12}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <Form.Item
                                     name="qualification"
                                     label="What is your highest qualification?"
@@ -257,7 +257,7 @@ const JobApplicationForm = () => {
                                 </Form.Item>
                             </Col>
 
-                            <Col span={12}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <Form.Item
                                     name="experience"
                                     label="How many years of experience do you have?"
@@ -279,7 +279,7 @@ const JobApplicationForm = () => {
                         </Row>
 
                         <Row gutter={16}>
-                            <Col span={12}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <Form.Item
                                     name="reference"
                                     label="How did you hear about us? (e.g., friend, agency)"
@@ -297,7 +297,7 @@ const JobApplicationForm = () => {
                                 </Form.Item>
                             </Col>
 
-                            <Col span={12}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <Form.Item
                                     name="noticePeriod"
                                     label="What is your notice period?"

@@ -27,3 +27,25 @@ justify-content: center;
     display: flex;
     justify-content: center;
 }
+#ApplicationTabsContainer .ant-tabs-nav{
+    background-color: white !important;
+    position: sticky;
+    top: 0px;
+    z-index: 555;
+}
+.CardHeaderContainer{
+    /* height: 70px; */
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.CardHeaderContainer h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media (max-width:769px){
+    #JobApplicationForm .ApplicationFormContainer{
+        width: 100%;
+    }
+}

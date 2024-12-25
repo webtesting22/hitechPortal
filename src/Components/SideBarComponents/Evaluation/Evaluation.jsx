@@ -80,10 +80,16 @@ function Evaluation() {
 			<TopBarComponent />
 			<div className="PortalMainContainer">
 				<div className="portalContainerHeader">
-				<Button><Link to="/JobApplicationForm">Click</Link></Button>
-					<Tabs defaultActiveKey="1">
-						<TabPane tab="Info" key="1">
-							{/* <Card>
+					<div className='CardHeaderContainer'>
+						<div>
+							<h4>Job Application Text</h4>
+						</div>
+					</div>
+					{/* <Button><Link to="/JobApplicationForm">Click</Link></Button> */}
+					<div id='ApplicationTabsContainer'>
+						<Tabs defaultActiveKey="1">
+							<TabPane tab="Info" key="1">
+								{/* <Card>
 
 								<div
 									style={{
@@ -334,192 +340,193 @@ function Evaluation() {
 									</Form>
 								</div>
 							</Card> */}
-							<JobApplicationForm/>
-						</TabPane>
-						<TabPane tab="Evaluation" key="2">
-							<Card>
-								<div
-									style={{
-										maxWidth: '1200px',
-										margin: '0 auto',
-										padding: '24px',
-										backgroundColor: '#fefefe',
-										borderRadius: '10px',
-										boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-										border: '1px solid #e6e6e6',
-									}}
-								>
-									<Title
-										level={3}
+								<JobApplicationForm />
+							</TabPane>
+							<TabPane tab="Evaluation" key="2">
+								<Card>
+									<div
 										style={{
-											textAlign: 'center',
-											marginBottom: '24px',
-											color: '#4a4a4a',
+											maxWidth: '1200px',
+											margin: '0 auto',
+											padding: '24px',
+											backgroundColor: '#fefefe',
+											borderRadius: '10px',
+											boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+											border: '1px solid #e6e6e6',
 										}}
 									>
-										Candidate Evaluation Form
-									</Title>
-									<Form
-										onFinish={onFinish}
-										layout="vertical"
-										style={{
-											color: '#595959',
-										}}
-									>
-										{[
-											{
-												question: 'Was the candidate prepared for the interview?',
-												subQuestion:
-													'Researched company, dressed appropriately, arrived on time?',
-											},
-											{
-												question: "Does their experience appear to match what's needed?",
-												subQuestion: 'Work experience, life experience, or volunteer work?',
-											},
-											{
-												question: 'Do they have some or all of the required credentials?',
-												subQuestion: 'For example, education, licenses, certifications?',
-											},
-											{
-												question: 'How are their interpersonal skills?',
-												subQuestion: 'Friendly, smiling, outgoing, kind, fun, interactive?',
-											},
-											{
-												question: 'How good are their communication skills?',
-												subQuestion:
-													'Written skills, i.e. resume, application, as well as verbal skills?',
-											},
-											{
-												question:
-													'How well do their technical skills match the job requirements?',
-												subQuestion: 'Specific technical tools, approaches, examples?',
-											},
-											{
-												question: 'How well did they answer teamwork job-related questions?',
-												subQuestion: 'Likes working with others, good rapport?',
-											},
-											{
-												question:
-													'How well did they answer customer service-related questions?',
-												subQuestion: 'Customer focused, good listener, problem solver?',
-											},
-											{
-												question: 'How open did they appear to be to learning new things?',
-												subQuestion: 'Willing to learn, attend training, accept feedback?',
-											},
-											{
-												question: 'How interested did the candidate seem in getting the job?',
-												subQuestion: 'In the job, the pay, the hours, the work requirements?',
-											},
-										].map(({ question, subQuestion }, index) => (
-											<Row
-												gutter={[24, 16]}
-												key={index}
-												style={{
-													marginBottom: '16px',
-												}}
-											>
-												{/* Question and Sub-Question Column */}
-												<Col xs={24} sm={24} md={8}>
-													<Text
-														strong
-														style={{
-															color: '#333',
-														}}
-													>
-														{`${index + 1}. ${question}`}
-													</Text>
-													<Text
-														type="secondary"
-														style={{
-															display: 'block',
-															color: '#7d7d7d',
-															marginBottom: '8px',
-														}}
-													>
-														{subQuestion}
-													</Text>
-												</Col>
-
-												{/* Feedback Column */}
-												<Col xs={24} sm={24} md={12}>
-													<Form.Item
-														name={`question_${index + 1}_feedback`}
-														rules={[
-															{
-																required: true,
-																message: 'Please provide feedback.',
-															},
-														]}
-													>
-														<Input.TextArea
-															rows={2}
-															placeholder="Enter your evaluation here..."
-															style={{
-																borderRadius: '8px',
-																border: '1px solid #d9d9d9',
-																padding: '10px',
-																backgroundColor: '#f9f9f9',
-																width: '100%',
-															}}
-														/>
-													</Form.Item>
-												</Col>
-
-												{/* Marks Column */}
-												<Col xs={24} sm={24} md={4}>
-													<Form.Item
-														name={`question_${index + 1}_marks`}
-														rules={[
-															{
-																required: true,
-																message: 'Please assign marks out of 10.',
-															},
-														]}
-													>
-														<InputNumber
-															min={0}
-															max={10}
-															placeholder="Marks (0-10)"
-															style={{
-																width: '80%', // Decreased width here
-																borderRadius: '8px',
-																padding: '6px',
-																textAlign: 'center',
-															}}
-														/>
-													</Form.Item>
-												</Col>
-											</Row>
-										))}
-										<Form.Item>
-											<Row justify="center">
-												<Button
-													type="primary"
-													htmlType="submit"
+										<Title
+											level={3}
+											style={{
+												textAlign: 'center',
+												marginBottom: '24px',
+												color: '#4a4a4a',
+											}}
+										>
+											Candidate Evaluation Form
+										</Title>
+										<Form
+											onFinish={onFinish}
+											layout="vertical"
+											style={{
+												color: '#595959',
+											}}
+										>
+											{[
+												{
+													question: 'Was the candidate prepared for the interview?',
+													subQuestion:
+														'Researched company, dressed appropriately, arrived on time?',
+												},
+												{
+													question: "Does their experience appear to match what's needed?",
+													subQuestion: 'Work experience, life experience, or volunteer work?',
+												},
+												{
+													question: 'Do they have some or all of the required credentials?',
+													subQuestion: 'For example, education, licenses, certifications?',
+												},
+												{
+													question: 'How are their interpersonal skills?',
+													subQuestion: 'Friendly, smiling, outgoing, kind, fun, interactive?',
+												},
+												{
+													question: 'How good are their communication skills?',
+													subQuestion:
+														'Written skills, i.e. resume, application, as well as verbal skills?',
+												},
+												{
+													question:
+														'How well do their technical skills match the job requirements?',
+													subQuestion: 'Specific technical tools, approaches, examples?',
+												},
+												{
+													question: 'How well did they answer teamwork job-related questions?',
+													subQuestion: 'Likes working with others, good rapport?',
+												},
+												{
+													question:
+														'How well did they answer customer service-related questions?',
+													subQuestion: 'Customer focused, good listener, problem solver?',
+												},
+												{
+													question: 'How open did they appear to be to learning new things?',
+													subQuestion: 'Willing to learn, attend training, accept feedback?',
+												},
+												{
+													question: 'How interested did the candidate seem in getting the job?',
+													subQuestion: 'In the job, the pay, the hours, the work requirements?',
+												},
+											].map(({ question, subQuestion }, index) => (
+												<Row
+													gutter={[24, 16]}
+													key={index}
 													style={{
-														backgroundColor: '#1890ff',
-														borderColor: '#1890ff',
-														borderRadius: '6px',
-														padding: '6px 24px',
+														marginBottom: '16px',
 													}}
 												>
-													Submit Evaluation
-												</Button>
-											</Row>
-										</Form.Item>
-									</Form>
-								</div>
-							</Card>
-						</TabPane>
-					</Tabs>
+													{/* Question and Sub-Question Column */}
+													<Col xs={24} sm={24} md={8}>
+														<Text
+															strong
+															style={{
+																color: '#333',
+															}}
+														>
+															{`${index + 1}. ${question}`}
+														</Text>
+														<Text
+															type="secondary"
+															style={{
+																display: 'block',
+																color: '#7d7d7d',
+																marginBottom: '8px',
+															}}
+														>
+															{subQuestion}
+														</Text>
+													</Col>
+
+													{/* Feedback Column */}
+													<Col xs={24} sm={24} md={12}>
+														<Form.Item
+															name={`question_${index + 1}_feedback`}
+															rules={[
+																{
+																	required: true,
+																	message: 'Please provide feedback.',
+																},
+															]}
+														>
+															<Input.TextArea
+																rows={2}
+																placeholder="Enter your evaluation here..."
+																style={{
+																	borderRadius: '8px',
+																	border: '1px solid #d9d9d9',
+																	padding: '10px',
+																	backgroundColor: '#f9f9f9',
+																	width: '100%',
+																}}
+															/>
+														</Form.Item>
+													</Col>
+
+													{/* Marks Column */}
+													<Col xs={24} sm={24} md={4}>
+														<Form.Item
+															name={`question_${index + 1}_marks`}
+															rules={[
+																{
+																	required: true,
+																	message: 'Please assign marks out of 10.',
+																},
+															]}
+														>
+															<InputNumber
+																min={0}
+																max={10}
+																placeholder="Marks (0-10)"
+																style={{
+																	width: '80%', // Decreased width here
+																	borderRadius: '8px',
+																	padding: '6px',
+																	textAlign: 'center',
+																}}
+															/>
+														</Form.Item>
+													</Col>
+												</Row>
+											))}
+											<Form.Item>
+												<Row justify="center">
+													<Button
+														type="primary"
+														htmlType="submit"
+														style={{
+															backgroundColor: '#1890ff',
+															borderColor: '#1890ff',
+															borderRadius: '6px',
+															padding: '6px 24px',
+														}}
+													>
+														Submit Evaluation
+													</Button>
+												</Row>
+											</Form.Item>
+										</Form>
+									</div>
+								</Card>
+							</TabPane>
+						</Tabs>
+					</div>
 
 				</div>
 
 			</div>
 
 		</div>
-		
+
 	</>
 
 	);
