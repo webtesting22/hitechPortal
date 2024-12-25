@@ -5,7 +5,7 @@ justify-content: center;
 }
 
 #JobApplicationForm .ApplicationFormContainer{
-    width: 70%;
+    width: 80%;
 }
 .Formheader{
     margin: 3rem 0rem;
@@ -30,7 +30,7 @@ justify-content: center;
 #ApplicationTabsContainer .ant-tabs-nav{
     background-color: white !important;
     position: sticky;
-    top: 0px;
+    top: -22px;
     z-index: 555;
 }
 .CardHeaderContainer{

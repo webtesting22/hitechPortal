@@ -47,7 +47,7 @@ const CareerApplication = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4040/api/hightech/getApplication');
+        const response = await fetch('https://napi.prepseed.com/hightech/getApplication');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
